@@ -1,0 +1,28 @@
+{
+  "name": "api-deploy",
+  "version": "1.0.0",
+  "description": "testing deployment to cloud",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start:prod": "node ./build/app.js",
+    "start:dev": "tsx ./src/app.ts",
+    "migrate": "prisma migrate deploy"
+  },
+  "engines": {
+    "node": "20"
+  },
+  "author": "Eduardo Evaristo",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "prisma": "^5.20.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "express": "^4.21.1"
+  }
+}
